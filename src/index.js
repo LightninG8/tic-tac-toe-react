@@ -26,7 +26,7 @@ class Board extends React.Component {
                         onClick={() => this.props.onClick(3 * j + i)}
                         isWinnerSquare={() => {
                             if (this.props.winnerSquares != null) {
-                                if (this.props.winnerSquares[i] === 3 * j + i) {
+                                if ((this.props.winnerSquares[j] === 3 * j + i) || (this.props.winnerSquares[i] === 3 * j + i)) {
                                     return "square isWinnerSquare"
                                 } 
                             }
